@@ -22,6 +22,16 @@
     --color5: #ffff;
     --color-shadow: #0000004d;
 }
+body{
+    height: 100%;
+    width: 100%;
+  
+}
+header{
+    height: 2%;
+    width: 100%;
+}
+
 
 * {
     margin: 0;
@@ -37,7 +47,7 @@
     padding: 0 30px 0 30px;
     display: flex;
     justify-content: space-between;    
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0 2px 4px var(--color-shadow);
@@ -70,7 +80,7 @@
     font-weight: 200;
     font-size: 120px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 100px;
     text-shadow: 2px 2px 4px var(--color-shadow);;
 }
 
@@ -117,19 +127,24 @@
     box-shadow: 2px 2px 4px var(--color-shadow);
 }
 
-.btn {
+.btn  {
     position: absolute;
     padding: .3em .5em;
     border-radius: 40px;
     display: flex;
+    justify-content: space-between;
     flex-flow: row nowrap;
     gap: 1em;
     margin-bottom: 0.3em;
+    border: 1px solid;
 }
+
+
 
 .boton {
     width: 0.5em;
     height: 0.5em;
+    display: flex;
     border-radius: 50%;
     background-color: var(--color1);
     box-shadow: 2px 2px 4px var(--color-shadow);
@@ -189,9 +204,13 @@
 }
 
 .card img {
-    width: 60%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 2px solid var(--color1);
+    margin: 0;
+    border: 1px solid #0005;
+    box-shadow: 0 0 5px;
 }
 
 .card h2 {
@@ -199,6 +218,7 @@
     font-size: 1.7rem;
     color: var(--color1);
     margin-top: 15px;
+    margin: 0;
 }
 
 .card p {
@@ -206,47 +226,61 @@
     color: var(--color3);
     margin-top: 15px;
     font-size: 1.5em;
+    margin: 0;
 }
 /* 
 /* CATALOGO */
 #productos {background-color: #809e6a;
     padding-bottom: 60px;
+  
 }
 
 .img-catalogo {
     color: white;
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
     padding-top: 20px;
     margin-bottom: 20vh;
+ 
+ 
 }
 
 .img-catalogo h3 {
+   
     margin-right: 27vw;
     margin-top: 10px;
     font-family: font2;
     text-transform: uppercase;
     font-size: 7em;
+ 
 }
 
 
 .contenedor-catalogo {
     display: flex;
-    width: 69%;
+    width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
     column-gap: 70px;
     row-gap: 40px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 250px  250px  250px;
 }
 
 .contenedor-catalogo img {
-    border: 1px solid black;
-    height: 70%;
+     width: 100px;
+     height: 100px;
+     box-shadow: 0 0 10px;
     object-fit: cover;
+    margin-left: 100px;
+
 }
 
 .card-body {
     background-color: var(--color4);
+   
 }
 
 .card-body p {
@@ -259,7 +293,8 @@
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;;
+    width: 100%;
+ 
     padding: 20px;
 }
 
@@ -276,8 +311,11 @@
 .products {
     display: flex;
     /* flex-wrap: wrap; */
-    gap: 20px;
+    align-items: center;
     justify-content:left;
+    height: 250px;
+    width: 100%;
+    margin:0 ;
 }
 
 .product {
@@ -287,29 +325,34 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 170px;
-    padding: 20px;
+    height: 200px;
+    margin: 2px;
     text-align: center;
+    transition: all 0.25s ease-in-out;
 }
 
 .product:hover{
-    border: 3px solid #ff952b;
+    border: 1.5px solid #ff952b;
 }
 
 .product:hover p{
     color: #ff952b;
 }
 
+
 .product img {
     background-size: cover;
-    width: 100%;
-    height: 60%;
+    width: 90px;
+    height: 90px;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
+    margin: 5px  0 5px 0;
+
 }
 
 .product h2 {
     margin: 10px 0;
     font-size: 1.2em;
+
 }
 
 .product p {
@@ -511,3 +554,6 @@ input[type="submit"]:hover {
     width: 40vw;
     height: 50vh;
 }
+
+
+
