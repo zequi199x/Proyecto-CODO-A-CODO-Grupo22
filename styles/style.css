@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&display=swap');
+
+@font-face {
+    font-family: font1;
+    src: url(./font/Lucida\ Sans\ Demibold\ Roman.ttf);
+}
+@font-face{ 
+    font-family: font2;
+    src: url(./font/Caveat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: font3;
+    src: url(./font/MellonerRegular.ttf);
+}
+
+:root {
+    --color1: #B2732F;
+    --color2: #a6cf8b;
+    --color3: #089344;
+    --color4: #8ec048;
+    --color5: #ffff;
+    --color-shadow: #0000004d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegacion */
+
+.bar_container {
+    background: var(--color5);
+    height: 12vh;
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;    
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    z-index: 10000;
+}
+
+.logo img {
+    height: 150%;
+    margin-top: -25px;
+}
+
+.navigation {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin: auto;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--color1);
+    font-family: "Caveat";
+    font-size: 40px;
+    font-weight: 50;
+}
+
+.titulo {
+    font-family: font3;
+    color: var(--color3);
+    font-weight: 200;
+    font-size: 120px;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px var(--color-shadow);;
+}
+
+.titulo span{
+    font-family: font1;
+    color: var(--color1);
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+}
+
+/* Carrusel de Imagenes */
+.imagenes {
+    
+    width: 100vw;
+    align-content: center;
+}
+
+.carrousel {
+    width: 70vw;
+    height: 65vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--color2);
+    box-shadow: 2px 2px 4px var(--color-shadow);
+    border-radius: 15px;
+}
+
+.carrousel-contenedor {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.2em 0 1.5em 0;
+    position: relative;
+}
+
+.carrousel-contenedor img {
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px var(--color-shadow);
+}
+
+.btn {
+    position: absolute;
+    padding: .3em .5em;
+    border-radius: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+    margin-bottom: 0.3em;
+}
+
+.boton {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: var(--color1);
+    box-shadow: 2px 2px 4px var(--color-shadow);
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: #089344;
+}
+
+/* Seccion Quienes Somos */
+
+.quienesSomos {
+    width: 100%;
+    height: 88vh;
+    background: var(--color5);
+    align-content: center;
+}
+
+.parrafo {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: var(--color3);
+    text-align: center;
+    line-height: 35px;
+}
+
+.quienesSomos-contenedor{
+    width: 80%;
+    background: var(--color2); 
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--color-shadow);
+
+}
+.quienesSomos-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 25px 0;
+    margin: 0 20px;
+    justify-content: center;
+
+}
+.quienesSomos-cards .card {
+    background: var(--color5);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 4px var(--color-shadow);
+
+}
+
+.card img {
+    width: 60%;
+    border-radius: 50%;
+    border: 2px solid var(--color1);
+}
+
+.card h2 {
+    font-family: "caveat";
+    font-size: 1.7rem;
+    color: var(--color1);
+    margin-top: 15px;
+}
+
+.card p {
+    font-family: "Caveat";
+    color: var(--color3);
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+/* 
+/* CATALOGO */
+#productos {background-color: #809e6a;
+    padding-bottom: 60px;
+}
+
+.img-catalogo {
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding-top: 20px;
+    margin-bottom: 20vh;
+}
+
+.img-catalogo h3 {
+    margin-right: 27vw;
+    margin-top: 10px;
+    font-family: font2;
+    text-transform: uppercase;
+    font-size: 7em;
+}
+
+
+.contenedor-catalogo {
+    display: flex;
+    width: 69%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 40px;
+}
+
+.contenedor-catalogo img {
+    border: 1px solid black;
+    height: 70%;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--color4);
+}
+
+.card-body p {
+    color: white;
+}
+
+/* Catalogo II */
+/* Catalogo */
+.catalog {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;;
+    padding: 20px;
+}
+
+.catalog h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content:left;
+}
+
+.product {
+    background-size: cover;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 170px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product:hover{
+    border: 3px solid #ff952b;
+}
+
+.product:hover p{
+    color: #ff952b;
+}
+
+.product img {
+    background-size: cover;
+    width: 100%;
+    height: 60%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.product p {
+    margin: 0;
+    color: #888;
+}
+
+/* PREGUNTAS-FRECUENTES */
+#container-preguntas {
+    margin: 2px auto;
+}
+
+.container-preguntas {
+    width: 75%;
+    margin: 50px auto;
+    padding: 15vh 3px 4px 0;
+    background-color: var(--color2);
+    border-radius: 6px;
+}
+
+.container-preguntas h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 5em;
+    font-family: font2;
+    text-transform: uppercase;
+}
+
+.container-preguntas>p {
+    width: 100%;
+    line-height: 150%;
+    padding-bottom: 5%;
+    text-align: left;
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+
+.preguntas-frecuentes {
+    box-shadow: 1px 1px 2px rgb(158, 156, 156);
+}
+
+.pregunta-frecuente {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    font-family: font3;
+}
+
+.simb-izq {
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.3; */
+    color: rgb(238, 240, 243);
+}
+
+.pregunta-frecuente p {
+    padding-top: 30px;
+    font-size: 1.3em;
+    width: 85%;
+}
+
+.simb-der {
+    width: 30px;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transition: 0.5s;
+    box-shadow: 0 0 12px -1px var(--color-dark-green);
+    background-color: black;
+    color: white;
+}
+
+.simb-der:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-pale-green);
+}
+
+.respuesta-frecuente {
+    height: 0;
+    padding: -10px 90px 4px 50px;
+    margin-left: 105px;
+    font-size: 1em;
+    overflow: hidden;
+    transition: 0.5s;
+    position: relative;
+    text-align: justify;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* FORMULARIO */
+
+.contactanos {
+    background: linear-gradient(to bottom, white 0%, #EEEEEE 40%);
+   
+    width: 100%;
+    height: 120vh;
+    display: block;
+}
+
+.titulo-formulario h3 {
+    font-family: font2;
+    font-size: 6.5em;
+    text-transform: uppercase;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    text-shadow: 10px 10px 30px black;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+form {
+    width: 100vw;
+    max-width: 550px;
+    /* border-radius: 8px; */
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 25px 30px 25px 10px rgb(65, 62, 62);
+    border: 4px solid transparent;
+    transition: 0.6s;
+    background-color: #76885B;
+}
+
+form:hover {
+    transition: 0.6s;
+    border: 4px solid white;
+}
+
+label {
+    display: block;
+    box-sizing: border-box;
+    font-family: Lilita One;
+    font-size: 1.5em;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 0;
+    color: #111412;
+}
+
+input,
+textarea {
+    width: 90%;
+    height: 35px;
+    border-radius: 16px;
+    margin-top: 8px;
+    font-size: 0.7em;
+    padding-left: 15px;
+    border: 2px solid black;
+    transition: 0.4s;
+}
+
+input:hover {
+    border: 1.7px solid transparent;
+    transition: 0.4s;
+}
+
+textarea:hover {
+    border: 1.7px solid transparent;
+    transition: 0.4s;
+}
+
+input[type="submit"] {
+    display: flex;
+    padding: unset;
+    width: 150px;
+    color: white;
+    height: 60px;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: font2;
+    font-size: 1.5em;
+    background-color: black;
+    /* border: 1px solid white; */
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+    background-color: gray;
+    transition: 0.4s;
+    font-size: 1.6em;
+}
+
+.mensaje {
+    height: 200px;
+    resize: none;
+}
+
+#carouselExample {
+    width: 40vw;
+    height: 50vh;
+}
